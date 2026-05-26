@@ -1,5 +1,5 @@
 {
-  "buildCommand": "node site/build.js",
+  "buildCommand": "node site/build.js && node site/build-verbose.js",
   "outputDirectory": "site",
   "framework": null,
   "installCommand": "echo skip",

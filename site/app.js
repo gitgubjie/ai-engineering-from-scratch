@@ -240,7 +240,8 @@
       html += '<div class="modal-lesson' + (userComplete ? ' user-done' : '') + '">';
       html += '<span class="modal-lesson-status ' + statusClass + '"' + (userComplete ? ' title="You completed this lesson"' : '') + '></span>';
       if (l.url) {
-        html += '<a href="' + l.url + '" target="_blank" rel="noopener">' + escapeHtml(l.name) + '</a>';
+        var localHref = lessonPath ? 'lesson.html?path=' + lessonPath : l.url;
+        html += '<a href="' + localHref + '">' + escapeHtml(l.name) + '</a>';
       } else {
         html += '<a>' + escapeHtml(l.name) + '</a>';
       }
